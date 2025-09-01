@@ -5,7 +5,7 @@ export default function Store() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/products')
+    axios.get('http://34.142.202.5:5000/products')
       .then((res) => setProducts(res.data))
       .catch((err) => console.error('Failed to fetch products:', err));
   }, []);
