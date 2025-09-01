@@ -59,7 +59,7 @@ export default function Store() {
       {/* Shop Collections */}
       <div className="max-w-6xl mx-auto px-4">
         <header className="my-10 text-center">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 tracking-tight">Shop Collections</h1>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 tracking-tight">Shop Collections Update</h1>
         </header>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {products.map((product) => (
