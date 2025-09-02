@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: Docker2/Dockerfile.backend
+    container_name: backend2
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: db
+      DB_USER: hengly
+      DB_PASSWORD: hengly168
+      DB_NAME: blogdb
+    depends_on:
+      - db
+    networks:
+      - shared_network
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: Docker2/Dockerfile.frontend
+    container_name: frontend2
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - shared_network
+
+  db:
+    image: mysql:8
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: blogdb
+      MYSQL_USER: hengly 
+      MYSQL_PASSWORD: hengly168
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - shared_network
+
+networks:
+  shared_network:
+    external: true
+
+volumes:
+  db_data:

@@ -1,0 +1,12 @@
+FROM node:22
+WORKDIR /app
+
+# Copy package.json from backend folder (relative to build context '..')
+COPY backend/package*.json ./
+RUN npm install
+
+# Copy all backend files
+COPY backend/. .
+
+EXPOSE 5000
+CMD ["node", "index.js"] 

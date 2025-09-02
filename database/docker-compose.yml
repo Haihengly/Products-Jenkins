@@ -6,7 +6,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root123
       MYSQL_DATABASE: blogdb
-      MYSQL_USER: hengly
+      MYSQL_USER: hengly 
       MYSQL_PASSWORD: hengly168
     ports:
       - "3306:3306"
