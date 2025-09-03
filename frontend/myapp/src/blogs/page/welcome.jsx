@@ -31,7 +31,7 @@ const cards = [
     icon: (
       <img
         className="w-full h-full mx-auto mb-4 object-contain"
-        src="https://www.creativefabrica.com/wp-content/uploads/2018/10/Store-shop-logo-by-DEEMKA-STUDIO-580x406.jpg"
+        src="https://img.freepik.com/premium-vector/minimalist-style-shop-logo-with-shop-building-silhouette-marketing-logos-sales-business-logos-product-sales_254342-412.jpg"
         alt="Store Logo"
       />
     ),

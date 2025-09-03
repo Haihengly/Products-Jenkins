@@ -5,7 +5,7 @@ export default function Store() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/products')
+    axios.get('https://hengly.online/api/products')
       .then((res) => setProducts(res.data))
       .catch((err) => console.error('Failed to fetch products:', err));
   }, []);
