@@ -1,0 +1,48 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: db
+      DB_USER: hengly
+      DB_PASSWORD: hengly168
+      DB_NAME: storedb
+    depends_on:
+      - db
+    networks:
+      - shared_network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - shared_network
+
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: storedb
+      MYSQL_USER: hengly 
+      MYSQL_PASSWORD: hengly168
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - shared_network
+
+networks:
+  shared_network:
+    external: true
+
+volumes:
+  db_data:
