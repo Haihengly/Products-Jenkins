@@ -14,7 +14,7 @@ export default function Store() {
     <div className="bg-white min-h-screen font-sans">
       {/* Top bar */}
       <div className="bg-gray-900 text-gray-100 text-xs text-center py-2">
-        Free shipping worldwide on all orders over $70
+        Free shipping worldwide on all orders over $100
       </div>
 
       {/* Logo & Nav */}
