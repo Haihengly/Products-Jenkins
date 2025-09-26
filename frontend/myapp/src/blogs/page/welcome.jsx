@@ -7,7 +7,7 @@ const cards = [
     description:
       "Access Jenkins dashboard, manage builds, and monitor CI/CD pipelines for your projects.",
     button: (
-        <a href="https://hengly.online/jenkins/" className="px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+        <a href="https://jenkins.hengly.online/" className="px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
           Go to Jenkins
         </a>
     ),
