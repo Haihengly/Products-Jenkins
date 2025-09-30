@@ -22,7 +22,7 @@ export default function Store() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-4">
           {/* Logo */}
           <div className="flex-1 flex justify-center md:justify-start mb-2 md:mb-0">
-            <span className="font-serif text-2xl tracking-wide font-semibold">Lee.</span>
+            <span className="font-serif text-2xl tracking-wide font-semibold">LeeCNomPang</span>
           </div>
           {/* Nav */}
           <nav className="flex-1 flex justify-center space-x-8 text-gray-700 text-sm">
