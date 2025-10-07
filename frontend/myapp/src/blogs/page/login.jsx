@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-white via-gray-500 to-black">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-white via-gray-400 to-black">
       <div className="flex w-[900px] h-[500px] bg-white bg-opacity-0 rounded-xl shadow-lg overflow-hidden">
         {/* Left Side */}
         <div className="flex-1 flex flex-col justify-center pl-16 pr-8">
