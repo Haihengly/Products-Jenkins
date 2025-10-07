@@ -5,7 +5,7 @@ def config = [
     envName: env.BRANCH_NAME, 
     version: '1.0.2', 
     branch: env.BRANCH_NAME, 
-    REPO_URL: 'https://github.com/Haihengly/My-Environment', 
+    REPO_URL: 'https://github.com/Haihengly/Products-Jenkins', 
     build: true, 
     deploy: true, 
 ] 
