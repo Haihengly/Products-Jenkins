@@ -7,7 +7,7 @@ export default function Login() {
       <div className="flex w-[900px] h-[500px] bg-white bg-opacity-0 rounded-xl shadow-lg overflow-hidden">
         {/* Left Side */}
         <div className="flex-1 flex flex-col justify-center pl-16 pr-8">
-          <h1 className="text-white text-4xl font-bold mb-6">Welcome to website</h1>
+          <h1 className="text-white text-4xl font-bold mb-6">Welcome to My website</h1>
         </div>
         {/* Right Side */}
         <div className="flex-1 bg-white flex flex-col justify-center items-center px-12">
