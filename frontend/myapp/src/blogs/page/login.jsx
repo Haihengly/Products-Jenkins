@@ -28,21 +28,6 @@ export default function Login() {
           Hello
         </h1>
         <div className="text-blue-400 text-sm mb-1">Good to see you here</div>
-        <a
-          href="https://Nityneha.com"
-          className="text-blue-600 text-xs font-bold mb-6 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Nityneha.com
-        </a>
-        {/* Logo */}
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Iconic_N.png"
-          alt="Logo"
-          className="w-16 h-16 mb-6"
-          style={{ filter: "drop-shadow(0 2px 8px #0002)" }}
-        />
         {/* Button */}
         <Link
           to="/welcome"
