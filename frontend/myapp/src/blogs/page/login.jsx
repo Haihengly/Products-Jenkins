@@ -1,55 +1,66 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// SVG for diagonal lines
+const BgLines = () => (
+  <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="100" x2="400" y2="0" stroke="#FFD6D6" strokeWidth="2" />
+    <line x1="200" y1="700" x2="800" y2="0" stroke="#D6D6FF" strokeWidth="2" />
+    <line x1="1200" y1="700" x2="1536" y2="0" stroke="#D6D6FF" strokeWidth="2" />
+    <line x1="0" y1="768" x2="600" y2="0" stroke="#D6D6FF" strokeWidth="2" />
+    <line x1="900" y1="768" x2="1536" y2="0" stroke="#FFD6D6" strokeWidth="2" />
+  </svg>
+);
+
 export default function Login() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-white via-gray-500 to-black">
-      <div className="flex w-[900px] h-[500px] bg-white bg-opacity-0 rounded-xl shadow-lg overflow-hidden">
-        {/* Left Side */}
-        <div className="flex-1 flex flex-col justify-center pl-16 pr-8">
-          <h1 className="text-white text-4xl font-bold mb-6">Welcome to My website</h1>
-        </div>
-        {/* Right Side */}
-        <div className="flex-1 bg-white flex flex-col justify-center items-center px-12">
-          <h2 className="text-blue-700 text-xl font-semibold mb-8">USER LOGIN</h2>
-          <form className="w-full max-w-xs">
-            <div className="mb-4">
-              <div className="flex items-center bg-gray-100 rounded-full px-4 py-2">
-                <span className="material-icons text-gray-400 mr-2">person</span>
-                <input
-                  type="text"
-                  placeholder="Username"
-                  className="bg-transparent outline-none flex-1 text-gray-700"
-                />
-              </div>
-            </div>
-            <div className="mb-4">
-              <div className="flex items-center bg-gray-100 rounded-full px-4 py-2">
-                <span className="material-icons text-gray-400 mr-2">lock</span>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className="bg-transparent outline-none flex-1 text-gray-700"
-                />
-              </div>
-            </div>
-            <div className="flex items-center justify-between mb-6 text-sm">
-              <label className="flex items-center">
-                <input type="checkbox" className="mr-2" />
-                <span className="text-gray-500">Remember</span>
-              </label>
-              <a href="#" className="text-blue-400 hover:underline">Forgot password?</a>
-            </div>
-            <button
-              type="submit"
-              className="w-full py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-400 text-white font-bold shadow-md hover:scale-105 transition"
-            >
-              <Link to="/welcome"> LOGIN </Link>
-            </button>
-          </form>
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-white overflow-hidden">
+      <BgLines />
+      <div className="z-10 flex flex-col items-center">
+        <h1
+          className="text-7xl font-bold mb-2"
+          style={{
+            background: "linear-gradient(90deg, #ff5959ff 40%, #ddff00ff 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Hello
+        </h1>
+        <div className="text-blue-400 text-sm mb-1">Good to see you here</div>
+        {/* Button */}
+        <Link
+          to="/welcome"
+          className="mb-10 px-8 py-2 rounded-xl border-2 border-blue-400 text-blue-500 font-semibold hover:bg-blue-50 transition"
+        >
+          LET'S START
+        </Link>
+        {/* Icons row */}
+        <div className="flex gap-10 mt-8">
+          {/* You can replace these with your own SVGs or icon components */}
+          <IconBox icon="person" />
+          <IconBox icon="wallet" />
+          <IconBox icon="chat" />
+          <IconBox icon="favorite" />
+          <IconBox icon="code" />
         </div>
       </div>
     </div>
   );
+}
 
+// Simple icon box using Material Icons
+function IconBox({ icon }) {
+  const icons = {
+    person: "👤",
+    wallet: "👛",
+    chat: "💬",
+    favorite: "💜",
+    code: "💻",
+  };
+  return (
+    <div className="border-2 border-blue-300 rounded-xl p-4 flex items-center justify-center text-3xl bg-white shadow-sm">
+      {icons[icon]}
+    </div>
+  );
 }
