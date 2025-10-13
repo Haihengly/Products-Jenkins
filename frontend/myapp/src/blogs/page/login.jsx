@@ -20,12 +20,12 @@ export default function Login() {
         <h1
           className="text-7xl font-bold mb-2"
           style={{
-            background: "linear-gradient(90deg, #ff5959ff 40%, #ddff00ff 100%)",
+            background: "linear-gradient(90deg, #59ff96ff 40%, #ddff00ff 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
         >
-          Hello
+          Wellcome to Website.
         </h1>
         <div className="text-blue-400 text-sm mb-1">Good to see you here</div>
         {/* Button */}
