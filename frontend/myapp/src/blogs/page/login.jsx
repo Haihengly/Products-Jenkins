@@ -25,7 +25,7 @@ export default function Login() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Hello
+          Wellcome to Website.
         </h1>
         <div className="text-blue-400 text-sm mb-1">Good to see you here</div>
         {/* Button */}
